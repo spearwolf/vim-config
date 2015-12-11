@@ -1,6 +1,6 @@
 ## vim-config
 
-this is my very personal, totaly messy but could-not-live-without (mac) vim config.
+this is my very personal, completely messy but could-not-live-without (mac) vim config.
 
 and yes, i am addicted to colorschemes :smiley:
 
