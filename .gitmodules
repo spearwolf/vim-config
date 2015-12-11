@@ -1,0 +1,186 @@
+[submodule "_vim/bundle/vim-pathogen"]
+	path = _vim/bundle/vim-pathogen
+	url = git@github.com:tpope/vim-pathogen.git
+[submodule "_vim/bundle/Benokai"]
+	path = _vim/bundle/Benokai
+	url = https://github.com/benjaminwhite/Benokai
+[submodule "_vim/bundle/DrawIt"]
+	path = _vim/bundle/DrawIt
+	url = git@github.com:vim-scripts/DrawIt.git
+[submodule "_vim/bundle/Revolution"]
+	path = _vim/bundle/Revolution
+	url = https://github.com/CruizeMissile/Revolution.vim
+[submodule "_vim/bundle/Spink"]
+	path = _vim/bundle/Spink
+	url = git@github.com:EHartC/Spink.git
+[submodule "_vim/bundle/VIvid.vim"]
+	path = _vim/bundle/VIvid.vim
+	url = git@github.com:DrowsySaturn/VIvid.vim.git
+[submodule "_vim/bundle/ack.vim"]
+	path = _vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "_vim/bundle/anderson.vim"]
+	path = _vim/bundle/anderson.vim
+	url = git@github.com:gilgigilgil/anderson.vim.git
+[submodule "_vim/bundle/beekai"]
+	path = _vim/bundle/beekai
+	url = git@github.com:stephanedemotte/beekai.git
+[submodule "_vim/bundle/colorscheme-holokai-for-vim"]
+	path = _vim/bundle/colorscheme-holokai-for-vim
+	url = git@github.com:changyuheng/color-scheme-holokai-for-vim.git
+[submodule "_vim/bundle/colorsbox"]
+	path = _vim/bundle/colorsbox
+	url = git@github.com:mkarmona/colorsbox.git
+[submodule "_vim/bundle/ctrlp.vim"]
+	path = _vim/bundle/ctrlp.vim
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "_vim/bundle/delimitMate"]
+	path = _vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "_vim/bundle/editorconfig-vim"]
+	path = _vim/bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule "_vim/bundle/emmet-vim"]
+	path = _vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "_vim/bundle/flattown"]
+	path = _vim/bundle/flattown
+	url = https://github.com/blerins/flattown
+[submodule "_vim/bundle/glsl.vim"]
+	path = _vim/bundle/glsl.vim
+	url = git@github.com:beyondmarc/glsl.vim.git
+[submodule "_vim/bundle/goyo.vim"]
+	path = _vim/bundle/goyo.vim
+	url = git@github.com:junegunn/goyo.vim.git
+[submodule "_vim/bundle/heroku-colorscheme"]
+	path = _vim/bundle/heroku-colorscheme
+	url = https://github.com/stulzer/heroku-colorscheme
+[submodule "_vim/bundle/javascript-libraries-syntax.vim"]
+	path = _vim/bundle/javascript-libraries-syntax.vim
+	url = git@github.com:othree/javascript-libraries-syntax.vim.git
+[submodule "_vim/bundle/lightline"]
+	path = _vim/bundle/lightline
+	url = https://github.com/itchyny/lightline.vim
+[submodule "_vim/bundle/material.vim"]
+	path = _vim/bundle/material.vim
+	url = git@github.com:jscappini/material.vim.git
+[submodule "_vim/bundle/materialbox.vim"]
+	path = _vim/bundle/materialbox.vim
+	url = git@github.com:mkarmona/materialbox.git
+[submodule "_vim/bundle/mushroom"]
+	path = _vim/bundle/mushroom
+	url = git@github.com:mtglsk/mushroom.git
+[submodule "_vim/bundle/nerdcommenter"]
+	path = _vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "_vim/bundle/nerdtree"]
+	path = _vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "_vim/bundle/one-dark.vim"]
+	path = _vim/bundle/one-dark.vim
+	url = git@github.com:mhumeSF/one-dark.vim.git
+[submodule "_vim/bundle/parsec.vim"]
+	path = _vim/bundle/parsec.vim
+	url = https://github.com/keith/parsec.vim.git
+[submodule "_vim/bundle/seoul256.vim"]
+	path = _vim/bundle/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "_vim/bundle/sprinkles"]
+	path = _vim/bundle/sprinkles
+	url = https://github.com/alexjgriffin/sprinkles
+[submodule "_vim/bundle/supertab"]
+	path = _vim/bundle/supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule "_vim/bundle/sweater"]
+	path = _vim/bundle/sweater
+	url = https://github.com/nice/sweater
+[submodule "_vim/bundle/syntastic"]
+	path = _vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "_vim/bundle/tabline.vim"]
+	path = _vim/bundle/tabline.vim
+	url = git://github.com/mkitt/tabline.vim.git
+[submodule "_vim/bundle/tabular"]
+	path = _vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "_vim/bundle/tagbar"]
+	path = _vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "_vim/bundle/typescript-vim"]
+	path = _vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "_vim/bundle/ultisnips"]
+	path = _vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "_vim/bundle/vim-adventurous"]
+	path = _vim/bundle/vim-adventurous
+	url = git@github.com:Dru89/vim-adventurous.git
+[submodule "_vim/bundle/vim-autoformat"]
+	path = _vim/bundle/vim-autoformat
+	url = git@github.com:Chiel92/vim-autoformat.git
+[submodule "_vim/bundle/vim-buddy"]
+	path = _vim/bundle/vim-buddy
+	url = git@github.com:DrSpatula/vim-buddy.git
+[submodule "_vim/bundle/vim-coffee-script"]
+	path = _vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "_vim/bundle/vim-colors-woju"]
+	path = _vim/bundle/vim-colors-woju
+	url = git@github.com:woju/vim-colors-woju.git
+[submodule "_vim/bundle/vim-colorscheme-deepsea"]
+	path = _vim/bundle/vim-colorscheme-deepsea
+	url = git@github.com:hewo/vim-colorscheme-deepsea.git
+[submodule "_vim/bundle/vim-colorschemes"]
+	path = _vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "_vim/bundle/vim-csscomb"]
+	path = _vim/bundle/vim-csscomb
+	url = https://github.com/csscomb/vim-csscomb.git
+[submodule "_vim/bundle/vim-devicons"]
+	path = _vim/bundle/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "_vim/bundle/vim-easymotion"]
+	path = _vim/bundle/vim-easymotion
+	url = git@github.com:easymotion/vim-easymotion.git
+[submodule "_vim/bundle/vim-frozen"]
+	path = _vim/bundle/vim-frozen
+	url = git@github.com:fent/vim-frozen.git
+[submodule "_vim/bundle/vim-fugitive"]
+	path = _vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "_vim/bundle/vim-github-colorscheme"]
+	path = _vim/bundle/vim-github-colorscheme
+	url = https://github.com/endel/vim-github-colorscheme.git
+[submodule "_vim/bundle/vim-go"]
+	path = _vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "_vim/bundle/vim-hybrid-material"]
+	path = _vim/bundle/vim-hybrid-material
+	url = git@github.com:kristijanhusak/vim-hybrid-material.git
+[submodule "_vim/bundle/vim-jade"]
+	path = _vim/bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule "_vim/bundle/vim-javascript"]
+	path = _vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "_vim/bundle/vim-jsbeautify"]
+	path = _vim/bundle/vim-jsbeautify
+	url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "_vim/bundle/vim-jsx"]
+	path = _vim/bundle/vim-jsx
+	url = git@github.com:mxw/vim-jsx.git
+[submodule "_vim/bundle/vim-markdown"]
+	path = _vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "_vim/bundle/vim-scheakur"]
+	path = _vim/bundle/vim-scheakur
+	url = git@github.com:scheakur/vim-scheakur.git
+[submodule "_vim/bundle/vim-sensible"]
+	path = _vim/bundle/vim-sensible
+	url = git://github.com/tpope/vim-sensible.git
+[submodule "_vim/bundle/vim-surround"]
+	path = _vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "_vim/bundle/vim_themes"]
+	path = _vim/bundle/vim_themes
+	url = git@github.com:loogica/vim_themes.git
