@@ -4,7 +4,7 @@ this is my very personal, completely messy but could-not-live-without (mac) vim 
 
 and yes, i am addicted to colorschemes :smiley:
 
-#### install
+#### how to install
 
 to install just create symlinks from `$HOME/.vimrc` and `$HOME/.vim/` to their counterparts from this repo.
 
