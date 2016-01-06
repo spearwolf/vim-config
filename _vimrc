@@ -499,11 +499,14 @@ endfunction
 
 " --- syntastic -------- --  -
 
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
+"let g:syntastic_error_symbol = '✗'
+let g:syntastic_error_symbol = 'e'
+let g:syntastic_warning_symbol = 'w'
+
 " Check on buffer open
 let g:syntastic_check_on_open = 1
-let g:syntastic_stl_format = '!%w ✗%e'
+"let g:syntastic_stl_format = '!%w ✗%e'
+let g:syntastic_stl_format = 'w%w e%e'
 
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_javascript_checkers = ['jscs']
@@ -711,16 +714,18 @@ if has("gui_running")
 
     " --- new dark colorschemes ------- --  -
 
-    "set background=light
-    set background=dark
+    set background=light
+    "set background=dark
 
     "colorscheme scheakur
     "colorscheme pencil
+    colorscheme lucius
     "colorscheme colorsbox-material
     "colorscheme colorsbox-greenish
-    colorscheme tango-desert
+    "colorscheme tango-desert
 
     "colorscheme colorsbox-faff
+    "colorscheme adventurous
     "colorscheme buddy
     "colorscheme VIvid
     "colorscheme holokai
