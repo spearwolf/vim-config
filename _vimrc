@@ -576,7 +576,7 @@ if has("gui_macvim")
 
     "set lines=37 columns=140
     "set lines=42 columns=128
-    set lines=33 columns=135
+    set lines=33 columns=142
 	"set lines=36 columns=130
 
 endif
@@ -719,13 +719,15 @@ if has("gui_running")
 
     " --- new dark colorschemes ------- --  -
 
-    "set background=light
-    set background=dark
+    colorscheme PaperColor
+    set background=light
+
+    "set background=dark
 
     "colorscheme scheakur
     "colorscheme pencil
     "colorscheme lucius
-    colorscheme Tomorrow-Night
+    "colorscheme Tomorrow-Night
     "colorscheme colorsbox-material
     "colorscheme colorsbox-greenish
     "colorscheme tango-desert

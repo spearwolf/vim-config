@@ -133,9 +133,6 @@
 [submodule "_vim/bundle/vim-csscomb"]
 	path = _vim/bundle/vim-csscomb
 	url = https://github.com/csscomb/vim-csscomb.git
-[submodule "_vim/bundle/vim-devicons"]
-	path = _vim/bundle/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons
 [submodule "_vim/bundle/vim-easymotion"]
 	path = _vim/bundle/vim-easymotion
 	url = git@github.com:easymotion/vim-easymotion.git
