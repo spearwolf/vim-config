@@ -109,9 +109,6 @@
 [submodule "_vim/bundle/typescript-vim"]
 	path = _vim/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
-[submodule "_vim/bundle/ultisnips"]
-	path = _vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "_vim/bundle/vim-adventurous"]
 	path = _vim/bundle/vim-adventurous
 	url = git@github.com:Dru89/vim-adventurous.git
@@ -184,3 +181,6 @@
 [submodule "_vim/bundle/vim_themes"]
 	path = _vim/bundle/vim_themes
 	url = git@github.com:loogica/vim_themes.git
+[submodule "_vim/bundle/birds-of-paradise"]
+	path = _vim/bundle/birds-of-paradise
+	url = git@github.com:ronny/birds-of-paradise.vim.git

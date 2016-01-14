@@ -500,17 +500,20 @@ endfunction
 " --- syntastic -------- --  -
 
 "let g:syntastic_error_symbol = '✗'
-let g:syntastic_error_symbol = 'e'
-let g:syntastic_warning_symbol = 'w'
+let g:syntastic_error_symbol = ''
+"let g:syntastic_error_symbol = 'E'
+let g:syntastic_warning_symbol = ''
+
 
 " Check on buffer open
-let g:syntastic_check_on_open = 1
-"let g:syntastic_stl_format = '!%w ✗%e'
-let g:syntastic_stl_format = 'w%w e%e'
+let g:syntastic_check_on_open = 0
+let g:syntastic_stl_format = '!%w ✗%e'
+"let g:syntastic_stl_format = 'w%w E%e'
 
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_javascript_checkers = ['jscs']
 
+let g:syntastic_css_checkers = ['']
 
 " -- autoformat --------- --  -
 
@@ -559,7 +562,8 @@ if has("gui_macvim")
     " --------------------------------------
 
     "set guifont=Knack:h14
-    set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
+    "set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
+    set guifont=Fura\ Mono\ Medium\ for\ Powerline:h13
 
     set linespace=2
     "set linespace=1
@@ -567,11 +571,12 @@ if has("gui_macvim")
 
     let g:enable_bold_font = 1
 
-	set transparency=2
+	set transparency=5
     "set blurradius=4
 
-    set lines=37 columns=140
-	"set lines=32 columns=135
+    "set lines=37 columns=140
+    "set lines=42 columns=128
+    set lines=33 columns=135
 	"set lines=36 columns=130
 
 endif
@@ -714,12 +719,13 @@ if has("gui_running")
 
     " --- new dark colorschemes ------- --  -
 
-    set background=light
-    "set background=dark
+    "set background=light
+    set background=dark
 
     "colorscheme scheakur
     "colorscheme pencil
-    colorscheme lucius
+    "colorscheme lucius
+    colorscheme Tomorrow-Night
     "colorscheme colorsbox-material
     "colorscheme colorsbox-greenish
     "colorscheme tango-desert
