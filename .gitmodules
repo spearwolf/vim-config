@@ -181,3 +181,15 @@
 [submodule "_vim/bundle/birds-of-paradise"]
 	path = _vim/bundle/birds-of-paradise
 	url = git@github.com:ronny/birds-of-paradise.vim.git
+[submodule "_vim/bundle/Laederon"]
+	path = _vim/bundle/Laederon
+	url = git@github.com:Donearm/Laederon.git
+[submodule "_vim/bundle/Ubaryd"]
+	path = _vim/bundle/Ubaryd
+	url = git@github.com:Donearm/Ubaryd.git
+[submodule "_vim/bundle/OceanicNext"]
+	path = _vim/bundle/OceanicNext
+	url = git@github.com:mhartington/oceanic-next.git
+[submodule "_vim/bundle/vim-256noir"]
+	path = _vim/bundle/vim-256noir
+	url = git@github.com:andreasvc/vim-256noir.git

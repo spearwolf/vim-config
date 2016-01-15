@@ -44,10 +44,12 @@ set nolist
 
 " Better redrawing for large files
 set ttyfast
+"set lazyredraw
 
 " Fillchars
 set fillchars+=vert:◦
 "║│░•◆▲▫︎◦
+
 
 " Move complete block one line down or up with <M-Down> and <M-Up> keys
 vmap <silent> <M-Up> :m'<-2<CR>gv
@@ -97,7 +99,7 @@ func! RemoveTrailingWhitespaces()
     call setpos('.', save_cursor)
 endf
 "map <silent> <Leader>w :call RemoveTrailingWhitespaces()<CR>
-
+autocmd BufWrite *.c,*.cpp,*.js,*.coffee,*.rb,*.html,*.jade,*.css,*.less,*.sass,*.scss,*.json call RemoveTrailingWhitespaces()
 "autocmd BufWritePost *.c,*.cpp,*.js,*.coffee,*.rb,*.html,*.jade,*.css,*.less,*.sass,*.scss,*.json call RemoveTrailingWhitespaces()
 
 " abbreviations
@@ -177,6 +179,7 @@ set splitbelow
 
 " 256bit terminal
 set t_Co=256
+colorscheme 256_noir
 
 " Sets how many lines of history vim has to remember
 set history=10000
@@ -207,6 +210,37 @@ set wildignore+=*/.nx/**,*.app
 set wildignore+=*/tmp/**,*.so,*.swp,*.zip,*.tar,*.bz2,*.gz
 set wildignore+=*/node_modules/**,*/.git/**
 
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :call VisualSelection('f')<CR>
+vnoremap <silent> # :call VisualSelection('b')<CR>
+
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction
+
+function! VisualSelection(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
 
 " Allow changing buffer without saving it first
 set hidden
@@ -216,7 +250,7 @@ set backspace=eol,start,indent
 
 " Case insensitive search
 "set ignorecase
-"set smartcase
+set smartcase
 
 " Make regex a little easier to type
 set magic
@@ -224,9 +258,11 @@ set magic
 " Show incomplete commands
 set showcmd
 
-" Turn off sound
-set vb
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
 set t_vb=
+set tm=500
 
 " Always show the statusline
 set laststatus=2
@@ -321,6 +357,10 @@ set completeopt=menu
 
 let g:goyo_width = 120
 map <silent> <F3> <Esc>:Goyo<CR>
+
+" --- SyntasticToggle --------------------- --- --  -
+
+nmap <silent> <F4> :SyntasticToggleMode<CR>
 
 " --- vim-jsx -------------------- --- --  -
 
@@ -499,11 +539,12 @@ endfunction
 
 " --- syntastic -------- --  -
 
+let g:syntastic_error_symbol = '💀'
 "let g:syntastic_error_symbol = '✗'
-let g:syntastic_error_symbol = ''
-"let g:syntastic_error_symbol = 'E'
-let g:syntastic_warning_symbol = ''
-
+"let g:syntastic_error_symbol = ''
+let g:syntastic_warning_symbol = '😧'
+"let g:syntastic_warning_symbol = '➤'
+"let g:syntastic_warning_symbol = ''
 
 " Check on buffer open
 let g:syntastic_check_on_open = 0
@@ -602,7 +643,7 @@ if has("gui_macvim")
 
     let g:enable_bold_font = 1
 
-	set transparency=5
+	set transparency=0
     "set blurradius=4
 
     "set lines=37 columns=140
@@ -749,13 +790,15 @@ if has("gui_running")
     "hi! link LineNr     NonText
 
     " --- new dark colorschemes ------- --  -
-
-    colorscheme PaperColor
+    "
     set background=light
+    "colorscheme OceanicNext
+    "colorscheme Ubaryd
+    "colorscheme Laederon
+    colorscheme scheakur
 
     "set background=dark
 
-    "colorscheme scheakur
     "colorscheme pencil
     "colorscheme lucius
     "colorscheme Tomorrow-Night
