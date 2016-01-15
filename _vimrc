@@ -541,6 +541,37 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " vim-tabber
 set tabline=%!tabber#TabLine()
 
+" --- gui_linux -------------- --- --  -
+
+if has("gui_gtk2")
+
+	" Navigate between tabs: ctrl+alt+(left|right)
+    map <silent> <C-M-Left> gT
+    map <silent> <C-M-Right> gt
+	"map <D-A-Right> :tabnext<CR>
+	"imap <D-A-Right> :tabnext<CR>
+	"map <D-A-Left> :tabprevious<CR>
+	"imap <D-A-Left> :tabprevious<CR>
+
+    " ======================================
+    " guifont
+    " --------------------------------------
+
+    "set guifont=Knack:h14
+    set guifont=Fura\ Mono\ for\ Powerline\ 10
+
+    "set linespace=2
+    "set linespace=1
+    "set linespace=0
+
+    let g:enable_bold_font = 1
+
+    set lines=37 columns=140
+	"set lines=32 columns=135
+	"set lines=36 columns=130
+
+endif
+
 " --- gui_macvim -------------- --- --  -
 
 if has("gui_macvim")
