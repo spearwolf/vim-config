@@ -179,7 +179,8 @@ set splitbelow
 
 " 256bit terminal
 set t_Co=256
-colorscheme 256_noir
+"colorscheme 256_noir
+colorscheme seoul256
 
 " Sets how many lines of history vim has to remember
 set history=10000
