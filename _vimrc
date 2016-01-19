@@ -417,6 +417,7 @@ if has("gui_running")
           \ }
 else
     let g:lightline = {
+          \ 'colorscheme': '16color',
           \ 'active': {
           \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
           \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
