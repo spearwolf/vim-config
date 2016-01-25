@@ -584,77 +584,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " vim-tabber
 set tabline=%!tabber#TabLine()
 
-" --- gui_linux -------------- --- --  -
-
-if has("gui_gtk2")
-
-	" Navigate between tabs: ctrl+alt+(left|right)
-    map <silent> <C-M-Left> gT
-    map <silent> <C-M-Right> gt
-	"map <D-A-Right> :tabnext<CR>
-	"imap <D-A-Right> :tabnext<CR>
-	"map <D-A-Left> :tabprevious<CR>
-	"imap <D-A-Left> :tabprevious<CR>
-
-    " ======================================
-    " guifont
-    " --------------------------------------
-
-    "set guifont=Knack:h14
-    set guifont=Fura\ Mono\ for\ Powerline\ 10
-
-    "set linespace=2
-    "set linespace=1
-    "set linespace=0
-
-    let g:enable_bold_font = 1
-
-    set lines=37 columns=140
-	"set lines=32 columns=135
-	"set lines=36 columns=130
-
-endif
-
-" --- gui_macvim -------------- --- --  -
-
-if has("gui_macvim")
-
-    set macligatures
-
-    let macvim_skip_cmd_opt_movement=1
-
-	" Navigate between tabs: ctrl+alt+(left|right)
-    map <silent> <C-M-Left> gT
-    map <silent> <C-M-Right> gt
-	"map <D-A-Right> :tabnext<CR>
-	"imap <D-A-Right> :tabnext<CR>
-	"map <D-A-Left> :tabprevious<CR>
-	"imap <D-A-Left> :tabprevious<CR>
-
-    " ======================================
-    " guifont
-    " --------------------------------------
-
-    "set guifont=Knack:h14
-    "set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
-    set guifont=Fura\ Mono\ Medium\ for\ Powerline:h13
-
-    set linespace=2
-    "set linespace=1
-    "set linespace=0
-
-    let g:enable_bold_font = 1
-
-	set transparency=0
-    "set blurradius=4
-
-    "set lines=37 columns=140
-    "set lines=42 columns=128
-    set lines=33 columns=142
-	"set lines=36 columns=130
-
-endif
-
 " --- gui -------------- --- --  -
 
 if has("gui_running")
@@ -817,6 +746,80 @@ if has("gui_running")
 
     "hi CursorLine guibg=#100217
     "hi VertSplit guibg=#201227 guifg=#000000
+
+endif
+
+" --- gui_linux -------------- --- --  -
+
+if has("gui_gtk2")
+
+	" Navigate between tabs: ctrl+alt+(left|right)
+    map <silent> <C-M-Left> gT
+    map <silent> <C-M-Right> gt
+	"map <D-A-Right> :tabnext<CR>
+	"imap <D-A-Right> :tabnext<CR>
+	"map <D-A-Left> :tabprevious<CR>
+	"imap <D-A-Left> :tabprevious<CR>
+
+    " ======================================
+    " guifont
+    " --------------------------------------
+
+    "set guifont=Knack:h14
+    set guifont=Fura\ Mono\ for\ Powerline\ 11
+
+    "set linespace=2
+    "set linespace=1
+    "set linespace=0
+
+    let g:enable_bold_font = 1
+
+    "set lines=37 columns=140
+    set lines=32 columns=135
+	"set lines=36 columns=130
+
+    set background=dark
+    colorscheme breeze
+
+endif
+
+" --- gui_macvim -------------- --- --  -
+
+if has("gui_macvim")
+
+    set macligatures
+
+    let macvim_skip_cmd_opt_movement=1
+
+	" Navigate between tabs: ctrl+alt+(left|right)
+    map <silent> <C-M-Left> gT
+    map <silent> <C-M-Right> gt
+	"map <D-A-Right> :tabnext<CR>
+	"imap <D-A-Right> :tabnext<CR>
+	"map <D-A-Left> :tabprevious<CR>
+	"imap <D-A-Left> :tabprevious<CR>
+
+    " ======================================
+    " guifont
+    " --------------------------------------
+
+    "set guifont=Knack:h14
+    "set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
+    set guifont=Fura\ Mono\ Medium\ for\ Powerline:h13
+
+    set linespace=2
+    "set linespace=1
+    "set linespace=0
+
+    let g:enable_bold_font = 1
+
+	set transparency=0
+    "set blurradius=4
+
+    "set lines=37 columns=140
+    "set lines=42 columns=128
+    set lines=33 columns=142
+	"set lines=36 columns=130
 
 endif
 
