@@ -393,7 +393,7 @@ if has("gui_running")
           "\ 'colorscheme': '16color',
 
     let g:lightline = {
-          \ 'colorscheme': 'powerline',
+          \ 'colorscheme': 'solarized',
           \ 'active': {
           \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
           \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -417,7 +417,7 @@ if has("gui_running")
           \ }
 else
     let g:lightline = {
-          \ 'colorscheme': '16color',
+          \ 'colorscheme': 'solarized',
           \ 'active': {
           \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
           \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -747,80 +747,87 @@ if has("gui_running")
     "hi CursorLine guibg=#100217
     "hi VertSplit guibg=#201227 guifg=#000000
 
-endif
 
-" --- gui_linux -------------- --- --  -
+    " --- gui_linux -------------- --- --  -
 
-if has("gui_gtk2")
+    if has("gui_gtk2")
 
-	" Navigate between tabs: ctrl+alt+(left|right)
-    map <silent> <C-M-Left> gT
-    map <silent> <C-M-Right> gt
-	"map <D-A-Right> :tabnext<CR>
-	"imap <D-A-Right> :tabnext<CR>
-	"map <D-A-Left> :tabprevious<CR>
-	"imap <D-A-Left> :tabprevious<CR>
+        " Navigate between tabs: ctrl+alt+(left|right)
+        map <silent> <C-M-Left> gT
+        map <silent> <C-M-Right> gt
+        "map <D-A-Right> :tabnext<CR>
+        "imap <D-A-Right> :tabnext<CR>
+        "map <D-A-Left> :tabprevious<CR>
+        "imap <D-A-Left> :tabprevious<CR>
 
-    " ======================================
-    " guifont
-    " --------------------------------------
+        " ======================================
+        " guifont
+        " --------------------------------------
 
-    "set guifont=Knack:h14
-    set guifont=Fura\ Mono\ for\ Powerline\ 11
+        "set guifont=Knack:h14
+        set guifont=Fura\ Mono\ for\ Powerline\ 11
 
-    "set linespace=2
-    "set linespace=1
-    "set linespace=0
+        "set linespace=2
+        "set linespace=1
+        "set linespace=0
 
-    let g:enable_bold_font = 1
+        let g:enable_bold_font = 1
 
-    "set lines=37 columns=140
-    set lines=32 columns=135
-	"set lines=36 columns=130
+        "set lines=37 columns=140
+        set lines=32 columns=135
+        "set lines=36 columns=130
 
-    set background=dark
-    colorscheme breeze
+        "set background=dark
+        "colorscheme breeze
+        set background=light
+        colorscheme scheakur
 
-endif
+    endif
 
-" --- gui_macvim -------------- --- --  -
+    " --- gui_macvim -------------- --- --  -
 
-if has("gui_macvim")
+    if has("gui_macvim")
 
-    set macligatures
+        set macligatures
 
-    let macvim_skip_cmd_opt_movement=1
+        let macvim_skip_cmd_opt_movement=1
 
-	" Navigate between tabs: ctrl+alt+(left|right)
-    map <silent> <C-M-Left> gT
-    map <silent> <C-M-Right> gt
-	"map <D-A-Right> :tabnext<CR>
-	"imap <D-A-Right> :tabnext<CR>
-	"map <D-A-Left> :tabprevious<CR>
-	"imap <D-A-Left> :tabprevious<CR>
+        " Navigate between tabs: ctrl+alt+(left|right)
+        map <silent> <C-M-Left> gT
+        map <silent> <C-M-Right> gt
+        "map <D-A-Right> :tabnext<CR>
+        "imap <D-A-Right> :tabnext<CR>
+        "map <D-A-Left> :tabprevious<CR>
+        "imap <D-A-Left> :tabprevious<CR>
 
-    " ======================================
-    " guifont
-    " --------------------------------------
+        " ======================================
+        " guifont
+        " --------------------------------------
 
-    "set guifont=Knack:h14
-    "set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
-    set guifont=Fura\ Mono\ Medium\ for\ Powerline:h13
+        "set guifont=Knack:h14
+        "set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
+        set guifont=Fura\ Mono\ Medium\ for\ Powerline:h13
 
-    set linespace=2
-    "set linespace=1
-    "set linespace=0
+        set linespace=2
+        "set linespace=1
+        "set linespace=0
 
-    let g:enable_bold_font = 1
+        let g:enable_bold_font = 1
 
-	set transparency=0
-    "set blurradius=4
+        set transparency=0
+        "set blurradius=4
 
-    "set lines=37 columns=140
-    "set lines=42 columns=128
-    set lines=33 columns=142
-	"set lines=36 columns=130
+        "set lines=37 columns=140
+        "set lines=42 columns=128
+        set lines=33 columns=142
+        "set lines=36 columns=130
 
-endif
+    endif
+
+else  " gui_running
+
+    colorscheme twilight256
+
+endif  " gui_running
 
 hi SpellCap term=reverse ctermbg=9 gui=undercurl guisp=Red
