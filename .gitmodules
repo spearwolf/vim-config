@@ -193,3 +193,9 @@
 [submodule "_vim/bundle/vim-256noir"]
 	path = _vim/bundle/vim-256noir
 	url = git@github.com:andreasvc/vim-256noir.git
+[submodule "_vim/bundle/hilal"]
+	path = _vim/bundle/hilal
+	url = https://github.com/kocakosm/hilal.git
+[submodule "_vim/bundle/vim-colors-eva-scooby"]
+	path = _vim/bundle/vim-colors-eva-scooby
+	url = https://github.com/jyota/vimColors.git

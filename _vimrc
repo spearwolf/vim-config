@@ -60,13 +60,7 @@ vmap <silent> <M-Down> :m'>+1<CR>gv
 
 " Zen-coding: emmet-vim
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,erb EmmetInstall
-
-" tern for vim
-"map <silent> <Leader>d <Esc>:TernDef<CR>
-"map <silent> <Leader>o <Esc>:TernDoc<CR>
-"map <silent> <Leader>r <Esc>:TernRefs<CR>
-"map <silent> <Leader>t <Esc>:TernType<CR>
+autocmd FileType html,css,erb,jsx EmmetInstall
 
 " NERD_Commenter
 map <silent> <C-x> <Leader>ci
@@ -82,15 +76,8 @@ map <silent> <M-Left> <C-T>
 imap <silent> <C-l> =>
 imap <silent> <C-k> ->
 
-" Unite
-"let g:unite_source_grep_command = 'ack'
-"let g:unite_source_grep_default_opts = '--no-heading --no-color -a -w'
-"let g:unite_source_grep_recursive_opt = ''
-"let g:unite_source_rec_max_cache_files = 99999
-
 " Ack
 map <silent> <Leader>f <Esc>*:Ack<CR>
-"nnoremap <Leader>f :Unite grep:.<CR>
 
 " remove trailing whitespaces
 func! RemoveTrailingWhitespaces()
@@ -99,7 +86,7 @@ func! RemoveTrailingWhitespaces()
     call setpos('.', save_cursor)
 endf
 "map <silent> <Leader>w :call RemoveTrailingWhitespaces()<CR>
-autocmd BufWrite *.c,*.cpp,*.js,*.coffee,*.rb,*.html,*.jade,*.css,*.less,*.sass,*.scss,*.json call RemoveTrailingWhitespaces()
+"autocmd BufWrite *.c,*.cpp,*.js,*.coffee,*.rb,*.html,*.jade,*.css,*.less,*.sass,*.scss,*.json call RemoveTrailingWhitespaces()
 "autocmd BufWritePost *.c,*.cpp,*.js,*.coffee,*.rb,*.html,*.jade,*.css,*.less,*.sass,*.scss,*.json call RemoveTrailingWhitespaces()
 
 " abbreviations
@@ -116,18 +103,17 @@ autocmd BufReadPost *
             \ endif
 
 " Tabular
-if exists(":Tabularize")
-    nmap <Leader>a= ::Tab /=<CR>
-    vmap <Leader>a= ::Tab /=<CR>
-    nmap <Leader>a: ::Tab /:\zs<CR>
-    vmap <Leader>a: ::Tab /:\zs<CR>
-endif
+"if exists(":Tabularize")
+    "vmap <Leader-a>: :'<,'>:Tabularize /:/l0c1r0<CR>
+"endif
 
 " will cause the quickfix window to open after any grep invocation
 autocmd QuickFixCmdPost *grep* cwindow
 
-" <F1>: CommandT
-map <silent> <F1> <Esc>:CommandT<CR>
+" <F1>: n/a
+"map <silent> <F1> <Esc>:CommandT<CR>
+"map <silent> <F1> <Esc>:Goyo<CR>
+"map <slient> <F1> <Esc><C-P>
 
 " <F2>: NERD tree
 map <silent> <F2> <Esc>:NERDTreeToggle<CR>
@@ -149,10 +135,10 @@ map <silent> <F10> <Esc>:echo "hi<" . synIDattr(synID(line("."),col("."),1),"nam
 " NERDTree options
 let g:NERDTreeWinPos        = "right"
 let g:NERDTreeShowBookmarks = 0
-let g:NERDTreeStatusLine    = 0
+let g:NERDTreeStatusLine    = 1
 
-" <F4>: Unite save session
-"nnoremap <F4> :<C-u>UniteSessionSave
+" <F4>: RemoveTrailingWhitespaces
+nnoremap <F5> :call RemoveTrailingWhitespaces()<CR>
 
 " tagbar
 "nmap <F8> :TagbarToggle<CR>
@@ -180,7 +166,8 @@ set splitbelow
 " 256bit terminal
 set t_Co=256
 "colorscheme 256_noir
-colorscheme seoul256
+"colorscheme seoul256
+"colorscheme setting can be found at the end of this _vimrc file
 
 " Sets how many lines of history vim has to remember
 set history=10000
@@ -271,9 +258,6 @@ set laststatus=2
 " Column width indicator
 "set colorcolumn=+1
 
-" Unite-outline
-let g:unite_source_outline_indent_width = 4
-
 " Writes to the unnamed register also writes to the * and + registers. This
 " makes it easy to interact with the system clipboard
 "if has ('unnamedplus')
@@ -290,16 +274,8 @@ nnoremap U :redo<cr>
 
 " --- javascript-libraries-syntax ------- --- --  -
 
-let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,react,requirejs,sugar,jasmine,chai,handlebars'
-
-" --- Unite ------- --- --  -
-
-" Use the fuzzy matcher for everything
-"call unite#filters#matcher_default#use(['matcher_fuzzy'])
-" Open in bottom right
-"let g:unite_split_rule = "botright"
-" Shorten the default update date of 500ms
-"let g:unite_update_time = 200
+"let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,angularuirouter,react,requirejs,sugar,jasmine,chai,handlebars'
+let g:used_javascript_libs = 'requirejs,jasmine'
 
 " -- see http://amix.dk/blog/post/19548
 if has("persistent_undo")
@@ -393,7 +369,7 @@ if has("gui_running")
           "\ 'colorscheme': '16color',
 
     let g:lightline = {
-          \ 'colorscheme': 'solarized',
+          \ 'colorscheme': 'powerline',
           \ 'active': {
           \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
           \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -720,16 +696,6 @@ if has("gui_running")
     "hi! link VertSplit  NonText
     "hi! link LineNr     NonText
 
-    " --- new dark colorschemes ------- --  -
-    "
-    set background=light
-    "colorscheme OceanicNext
-    "colorscheme Ubaryd
-    "colorscheme Laederon
-    colorscheme scheakur
-
-    "set background=dark
-
     "colorscheme pencil
     "colorscheme lucius
     "colorscheme Tomorrow-Night
@@ -743,6 +709,31 @@ if has("gui_running")
     "colorscheme VIvid
     "colorscheme holokai
     "colorscheme dunkelmagie
+
+    " --- new colorschemes ------- --  -
+
+    "set background=light
+    "colorscheme OceanicNext
+    "colorscheme Ubaryd
+    "colorscheme Laederon
+    "colorscheme scheakur
+
+    " #==--- new dark colorschemes ------- --  -
+
+    set background=dark
+
+    " Day is default
+    "let g:sierra_Twilight = 1 " Twilight
+    let g:sierra_Midnight = 1 " Midnight
+    "let g:sierra_Pitch = 1    " Darkest: Pitch
+    "colorscheme sierra
+
+    "colorscheme Kafka
+    colorscheme hilal
+    "colorscheme eva
+    "colorscheme scooby
+
+    " #==--- --  -
 
     "hi CursorLine guibg=#100217
     "hi VertSplit guibg=#201227 guifg=#000000
@@ -806,15 +797,15 @@ if has("gui_running")
 
         "set guifont=Knack:h14
         "set guifont=Literation\ Mono\ Powerline\ Nerd\ Font\ Complete:h14
-        set guifont=Fura\ Mono\ Medium\ for\ Powerline:h13
+        set guifont=Fura\ Mono\ Medium\ for\ Powerline:h14
 
-        set linespace=2
-        "set linespace=1
+        "set linespace=2
+        set linespace=1
         "set linespace=0
 
         let g:enable_bold_font = 1
 
-        set transparency=0
+        set transparency=3
         "set blurradius=4
 
         "set lines=37 columns=140
