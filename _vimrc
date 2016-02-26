@@ -1,5 +1,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+execute pathogen#helptags()
 
 runtime! plugin/sensible.vim
 
@@ -130,7 +131,6 @@ let g:bufExplorerSplitBelow=0        " Split new window below current.
 let g:bufExplorerSortBy='number'     " Sort by the buffer's number.
 let g:bufExplorerSplitOutPathName=0  " Don't split the path and file
                                      " name.
-
 
 " <F2>: NERD tree
 map <silent> <F2> <Esc>:NERDTreeToggle<CR>
