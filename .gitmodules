@@ -97,9 +97,6 @@
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "_vim/bundle/tabline.vim"]
-	path = _vim/bundle/tabline.vim
-	url = git://github.com/mkitt/tabline.vim.git
 [submodule "_vim/bundle/tabular"]
 	path = _vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
@@ -199,3 +196,12 @@
 [submodule "_vim/bundle/vim-colors-eva-scooby"]
 	path = _vim/bundle/vim-colors-eva-scooby
 	url = https://github.com/jyota/vimColors.git
+[submodule "_vim/bundle/bufexplorer"]
+	path = _vim/bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "_vim/bundle/vim-wintabs"]
+	path = _vim/bundle/vim-wintabs
+	url = https://github.com/zefei/vim-wintabs
+[submodule "_vim/bundle/Sierra"]
+	path = _vim/bundle/Sierra
+	url = git@github.com:AlessandroYorba/Sierra.git

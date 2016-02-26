@@ -110,10 +110,27 @@ autocmd BufReadPost *
 " will cause the quickfix window to open after any grep invocation
 autocmd QuickFixCmdPost *grep* cwindow
 
-" <F1>: n/a
+" <F1>
+"map <silent> <F1> <Esc>:ToggleBufExplorer<CR>
+map <silent> <F1> <Esc>:BufExplorerHorizontalSplit<CR>
+"map <silent> <F1> <Esc>:BufExplorerVerticalSplit<CR>
 "map <silent> <F1> <Esc>:CommandT<CR>
 "map <silent> <F1> <Esc>:Goyo<CR>
 "map <slient> <F1> <Esc><C-P>
+
+" BufExplorer
+let g:bufExplorerDefaultHelp=0       " Do not show default help.
+let g:bufExplorerShowDirectories=0   " Do not show directories.
+let g:bufExplorerShowTabBuffer=0
+let g:bufExplorerShowRelativePath=1  " Show relative paths.
+let g:bufExplorerSplitVertSize=30    " New split windows size set by Vim.
+let g:bufExplorerSplitHorzSize=8     " New split window is n rows high.
+let g:bufExplorerShowNoName=1        " Show "No Name" buffers.
+let g:bufExplorerSplitBelow=0        " Split new window below current.
+let g:bufExplorerSortBy='number'     " Sort by the buffer's number.
+let g:bufExplorerSplitOutPathName=0  " Don't split the path and file
+                                     " name.
+
 
 " <F2>: NERD tree
 map <silent> <F2> <Esc>:NERDTreeToggle<CR>
@@ -558,7 +575,9 @@ let g:formatters_javascript = ['eslint']
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " vim-tabber
-set tabline=%!tabber#TabLine()
+"set tabline=%!tabber#TabLine()
+
+set showtabline=0
 
 " --- gui -------------- --- --  -
 
@@ -568,7 +587,8 @@ if has("gui_running")
     set nonumber
 
     "set guioptions=egmrL
-    set guioptions=egm
+    "set guioptions=egm
+    set guioptions=gm
 
     set nocursorline
     "set cursorline
