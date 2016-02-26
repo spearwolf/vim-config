@@ -205,3 +205,6 @@
 [submodule "_vim/bundle/Sierra"]
 	path = _vim/bundle/Sierra
 	url = git@github.com:AlessandroYorba/Sierra.git
+[submodule "_vim/bundle/minibufexpl"]
+	path = _vim/bundle/minibufexpl
+	url = git@github.com:fholgado/minibufexpl.vim.git

@@ -112,12 +112,18 @@ autocmd BufReadPost *
 autocmd QuickFixCmdPost *grep* cwindow
 
 " <F1>
+map <silent> <F1> <Esc>:MBEToggle<CR>
 "map <silent> <F1> <Esc>:ToggleBufExplorer<CR>
-map <silent> <F1> <Esc>:BufExplorerHorizontalSplit<CR>
+"map <silent> <F1> <Esc>:BufExplorerHorizontalSplit<CR>
 "map <silent> <F1> <Esc>:BufExplorerVerticalSplit<CR>
 "map <silent> <F1> <Esc>:CommandT<CR>
 "map <silent> <F1> <Esc>:Goyo<CR>
 "map <slient> <F1> <Esc><C-P>
+
+" MiniBufExpl
+map <silent> <C-Tab> <Esc>:MBEFocus<CR>
+let g:miniBufExplorerAutoStart=1
+let g:miniBufExplUseSingleClick=1
 
 " BufExplorer
 let g:bufExplorerDefaultHelp=0       " Do not show default help.
@@ -834,6 +840,14 @@ if has("gui_running")
         "set lines=36 columns=130
 
     endif
+
+    " MiniBufExpl Colors
+    "hi MBENormal               guifg=#808080 guibg=fg
+    "hi MBEChanged              guifg=#CD5907 guibg=fg
+    "hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
+    "hi MBEVisibleChanged       guifg=#F1266F guibg=fg
+    "hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
+    "hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
 else  " gui_running
 
