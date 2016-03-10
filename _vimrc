@@ -205,6 +205,9 @@ set sidescrolloff=5
 " No need to show mode
 set noshowmode
 
+" translate-shell
+set keywordprg=trans\ :de
+
 set wildmode=list:longest,full
 set wildmenu "turn on wild menu
 
@@ -579,6 +582,9 @@ let g:formatters_javascript = ['eslint']
 
 " editorconfig-vim
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" --- ex commands ------- --  -
+:command Wd write|bdelete
 
 " vim-tabber
 "set tabline=%!tabber#TabLine()
