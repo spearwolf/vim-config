@@ -756,7 +756,7 @@ if has("gui_running")
 
     " Day is default
     "let g:sierra_Twilight = 1 " Twilight
-    let g:sierra_Midnight = 1 " Midnight
+    "let g:sierra_Midnight = 1 " Midnight
     "let g:sierra_Pitch = 1    " Darkest: Pitch
     "colorscheme sierra
 
