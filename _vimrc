@@ -808,7 +808,8 @@ if has("gui_running")
         "set background=dark
         "colorscheme breeze
         set background=light
-        colorscheme scheakur
+        "colorscheme scheakur
+        colorscheme zeroOne
 
     endif
 

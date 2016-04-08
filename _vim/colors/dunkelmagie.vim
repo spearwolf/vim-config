@@ -21,13 +21,15 @@ hi PreProc                      gui=none       guibg=#304050 guifg=#6080d0
 hi Title                        gui=bold       guibg=#17273a guifg=#ffffff
 hi Comment                      gui=italic     guibg=#203044 guifg=#607093
 
-hi Constant                     gui=none       guibg=#203055 guifg=#c10060
+hi Constant                     gui=none       guibg=#203055 guifg=#d10060
 hi Number                       gui=bold       guibg=#e0e0e0 guifg=#000000
 hi Boolean                      gui=bold       guibg=#e0e0e0 guifg=#000000
 hi Float                        gui=bold       guibg=#e0e0e0 guifg=#000000
 
 hi Todo                         gui=none       guibg=#ff0066 guifg=#fffff0
 
+hi Search                                      guibg=#000000 guifg=#ffff66
+hi Visual                       gui=none       guibg=#b0c0dd guifg=#000000
 hi Folded                       gui=none       guibg=#304055 guifg=#a0b0c0
 
 hi javascriptASscopeMethods     gui=underline  guibg=#304055 guifg=#ffffff
@@ -43,7 +45,7 @@ hi Visual                                      guibg=#405060
 hi LineNr                       gui=none       guibg=#08182c guifg=#304063
 hi SignColumn                   gui=none       guibg=#031326 guifg=#607093
 
-hi VertSplit                    gui=none       guibg=#203044 guifg=#203040
+hi VertSplit                    gui=none       guibg=#203044 guifg=#000022
 
 hi Directory                    gui=none       guibg=#203044 guifg=#ffc030
 hi NERDTreeCWD                  gui=none       guibg=#203044 guifg=#ffffcc
