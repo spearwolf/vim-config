@@ -589,7 +589,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " vim-tabber
 "set tabline=%!tabber#TabLine()
 
-set showtabline=0
+set showtabline=1
 
 " --- gui -------------- --- --  -
 
@@ -600,7 +600,7 @@ if has("gui_running")
 
     "set guioptions=egmrL
     "set guioptions=egm
-    set guioptions=gm
+    set guioptions=heagm
 
     set nocursorline
     "set cursorline
@@ -757,13 +757,18 @@ if has("gui_running")
     " Day is default
     "let g:sierra_Twilight = 1 " Twilight
     "let g:sierra_Midnight = 1 " Midnight
-    "let g:sierra_Pitch = 1    " Darkest: Pitch
+    let g:sierra_Pitch = 1    " Darkest: Pitch
     "colorscheme sierra
 
     "colorscheme Kafka
-    colorscheme hilal
+    "colorscheme hilal
     "colorscheme eva
     "colorscheme scooby
+    "colorscheme twilight
+
+    "colorscheme hybrid
+    "colorscheme distill
+    colorscheme zeroOne  "off
 
     " #==--- --  -
 
@@ -837,7 +842,7 @@ if has("gui_running")
 
         let g:enable_bold_font = 1
 
-        set transparency=3
+        set transparency=7
         "set blurradius=4
 
         "set lines=37 columns=140

@@ -205,6 +205,9 @@
 [submodule "_vim/bundle/Sierra"]
 	path = _vim/bundle/Sierra
 	url = git@github.com:AlessandroYorba/Sierra.git
-[submodule "_vim/bundle/minibufexpl"]
-	path = _vim/bundle/minibufexpl
-	url = git@github.com:fholgado/minibufexpl.vim.git
+[submodule "_vim/bundle/vim-distill"]
+	path = _vim/bundle/vim-distill
+	url = https://github.com/zandrmartin/vim-distill.git
+[submodule "_vim/bundle/vim-colors-off"]
+	path = _vim/bundle/vim-colors-off
+	url = https://github.com/pbrisbin/vim-colors-off.git
