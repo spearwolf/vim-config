@@ -768,7 +768,8 @@ if has("gui_running")
 
     "colorscheme hybrid
     "colorscheme distill
-    colorscheme zeroOne  "off
+    "colorscheme zeroOne  "off
+    colorscheme birds-of-paradise  "off
 
     " #==--- --  -
 
@@ -863,7 +864,9 @@ if has("gui_running")
 
 else  " gui_running
 
-    colorscheme twilight256
+    "colorscheme twilight256
+    "colorscheme seoul256
+    colorscheme xoria256
 
 endif  " gui_running
 

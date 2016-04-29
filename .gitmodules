@@ -211,3 +211,6 @@
 [submodule "_vim/bundle/vim-colors-off"]
 	path = _vim/bundle/vim-colors-off
 	url = https://github.com/pbrisbin/vim-colors-off.git
+[submodule "_vim/bundle/swift.vim"]
+	path = _vim/bundle/swift.vim
+	url = https://github.com/keith/swift.vim.git
