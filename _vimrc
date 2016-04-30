@@ -371,11 +371,6 @@ let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 0
 
 
-" --- typescript-vim -------------------- --- --  -
-
-let g:typescript_indent_disable = 1
-
-
 " --- lightline -------------------- --- --  -
 
 if has("gui_running")
@@ -560,6 +555,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 let g:syntastic_css_checkers = ['']
 
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker."
+
 " -- autoformat --------- --  -
 
 noremap <A-C-f> :Autoformat<CR>
@@ -567,8 +565,8 @@ vnoremap <A-C-f> :Autoformat<CR>
 
 "let g:formatters_javascript = ['jscs']
 
-let g:formatdef_eslint = '"eslint-formatter"'
-let g:formatters_javascript = ['eslint']
+"let g:formatdef_eslint = '"eslint-formatter"'
+"let g:formatters_javascript = ['eslint']
 
 " --  vim-jsbeautify --------- --  -
 
@@ -767,9 +765,9 @@ if has("gui_running")
     "colorscheme twilight
 
     "colorscheme hybrid
-    "colorscheme distill
+    colorscheme distill
     "colorscheme zeroOne  "off
-    colorscheme birds-of-paradise  "off
+    "colorscheme birds-of-paradise  "off
 
     " #==--- --  -
 

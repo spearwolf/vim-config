@@ -55,9 +55,6 @@
 [submodule "_vim/bundle/heroku-colorscheme"]
 	path = _vim/bundle/heroku-colorscheme
 	url = https://github.com/stulzer/heroku-colorscheme
-[submodule "_vim/bundle/javascript-libraries-syntax.vim"]
-	path = _vim/bundle/javascript-libraries-syntax.vim
-	url = git@github.com:othree/javascript-libraries-syntax.vim.git
 [submodule "_vim/bundle/lightline"]
 	path = _vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim
@@ -88,9 +85,6 @@
 [submodule "_vim/bundle/sprinkles"]
 	path = _vim/bundle/sprinkles
 	url = https://github.com/alexjgriffin/sprinkles
-[submodule "_vim/bundle/supertab"]
-	path = _vim/bundle/supertab
-	url = git@github.com:ervandew/supertab.git
 [submodule "_vim/bundle/sweater"]
 	path = _vim/bundle/sweater
 	url = https://github.com/nice/sweater
@@ -103,9 +97,6 @@
 [submodule "_vim/bundle/tagbar"]
 	path = _vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "_vim/bundle/typescript-vim"]
-	path = _vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "_vim/bundle/vim-adventurous"]
 	path = _vim/bundle/vim-adventurous
 	url = git@github.com:Dru89/vim-adventurous.git
@@ -214,3 +205,15 @@
 [submodule "_vim/bundle/swift.vim"]
 	path = _vim/bundle/swift.vim
 	url = https://github.com/keith/swift.vim.git
+[submodule "_vim/bundle/tsuquyomi"]
+	path = _vim/bundle/tsuquyomi
+	url = git@github.com:Quramy/tsuquyomi.git
+[submodule "_vim/bundle/vimproc.vim"]
+	path = _vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "_vim/bundle/typescript-vim"]
+	path = _vim/bundle/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "_vim/bundle/YouCompleteMe"]
+	path = _vim/bundle/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git
