@@ -112,7 +112,7 @@ autocmd BufReadPost *
 autocmd QuickFixCmdPost *grep* cwindow
 
 " <F1>
-map <silent> <F1> <Esc>:MBEToggle<CR>
+"map <silent> <F1> <Esc>:MBEToggle<CR>
 "map <silent> <F1> <Esc>:ToggleBufExplorer<CR>
 "map <silent> <F1> <Esc>:BufExplorerHorizontalSplit<CR>
 "map <silent> <F1> <Esc>:BufExplorerVerticalSplit<CR>
@@ -337,13 +337,13 @@ let g:javascript_enable_domhtmlcss = 1
 
 " --- YouCompleteMe -------------------- --- --  -
 
-"let g:ycm_min_num_of_chars_for_completion = 2
-"let g:ycm_complete_in_comments = 1
-"let g:ycm_complete_in_strings = 1
-"let g:ycm_collect_identifiers_from_comments_and_strings = 1
-"let g:ycm_collect_identifiers_from_tags_files = 1
-"let g:ycm_seed_identifiers_with_syntax = 1
-"let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_key_invoke_completion = '<C-Space>'
 "let g:ycm_cache_omnifunc = 0
 "let g:ycm_use_ultisnips_completer = 1
 
@@ -591,6 +591,8 @@ set showtabline=1
 
 " --- gui -------------- --- --  -
 
+hi clear
+
 if has("gui_running")
 
     "set number
@@ -750,8 +752,6 @@ if has("gui_running")
 
     " #==--- new dark colorschemes ------- --  -
 
-    set background=dark
-
     " Day is default
     "let g:sierra_Twilight = 1 " Twilight
     "let g:sierra_Midnight = 1 " Midnight
@@ -765,7 +765,7 @@ if has("gui_running")
     "colorscheme twilight
 
     "colorscheme hybrid
-    colorscheme distill
+    "colorscheme distill
     "colorscheme zeroOne  "off
     "colorscheme birds-of-paradise  "off
 
@@ -808,7 +808,8 @@ if has("gui_running")
         "colorscheme breeze
         set background=light
         "colorscheme scheakur
-        colorscheme zeroOne
+        "colorscheme zeroOne
+        colorscheme Tomorrow
 
     endif
 
@@ -842,13 +843,17 @@ if has("gui_running")
 
         let g:enable_bold_font = 1
 
-        set transparency=7
+        set transparency=2
         "set blurradius=4
 
         "set lines=37 columns=140
         "set lines=42 columns=128
         set lines=33 columns=142
         "set lines=36 columns=130
+
+        set background=light
+        "colorscheme Tomorrow
+        colorscheme zeroOne-Light
 
     endif
 
@@ -864,7 +869,8 @@ else  " gui_running
 
     "colorscheme twilight256
     "colorscheme seoul256
-    colorscheme xoria256
+    "colorscheme xoria256
+    colorscheme 256-grayvim
 
 endif  " gui_running
 

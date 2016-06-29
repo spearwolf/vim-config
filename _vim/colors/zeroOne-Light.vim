@@ -1,21 +1,10 @@
-" Name:       zeroOne.vim
-" Version:    0.1
-" Maintainer: github.com/pbrisbin
-" License:    The MIT License (MIT)
-"
-" A colorscheme meant to look like a more pleasant version of syntax off.
-" Structure and what little color there is is taken from pencil.vim
-"
-" https://github.com/reedes/vim-colors-pencil
-"
-"""
 hi clear
 
 if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='zeroOne'
+let g:colors_name='zeroOne-Light'
 
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -29,57 +18,56 @@ let s:light_gray      = { "gui": "#B2B2B2", "cterm": "249" }
 let s:lighter_gray    = { "gui": "#C6C6C6", "cterm": "251" }
 let s:nearly_white    = { "gui": "#E0E0E0", "cterm": "253" }
 let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
+let s:pink_bg         = { "gui": "#fff0f8", "cterm": "15"   }
 let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
+let s:gray_red        = { "gui": "#C35571", "cterm": "1"   }
 let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
 let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
+let s:orange_s        = { "gui": "#F08020", "cterm": "167" }
 let s:darker_blue     = { "gui": "#005F87", "cterm": "18"  }
 let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
+let s:gray_blue       = { "gui": "#507099", "cterm": "4"   }
 let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
-let s:light_blue      = { "gui": "#b6d6fd", "cterm": "153" }
+let s:light_blue      = { "gui": "#c6e6ff", "cterm": "153" }
 let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
 let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
 let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
 let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
+let s:lila            = { "gui": "#F000A0", "cterm": "5"   }
 let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
+let s:yellow_cursor   = { "gui": "#FFFF00", "cterm": "11"  }
 let s:yellow_c        = { "gui": "#a2a232", "cterm": "11"  }
 let s:yellow_cl       = { "gui": "#b2b272", "cterm": "11"  }
 let s:yellow_white    = { "gui": "#FFFFF0", "cterm": "11"  }
+let s:green_cl        = { "gui": "#72b272", "cterm": "10"  }
+let s:green_white     = { "gui": "#F0FFF0", "cterm": "11"  }
+let s:green_dark_white = { "gui": "#E0FFE0", "cterm": "11"  }
 let s:yellow_black    = { "gui": "#111100", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
-if &background == "dark"
-  let s:bg              = s:black
-  let s:bg_subtle       = s:light_black
-  let s:bg_very_subtle  = s:subtle_black
-  let s:norm            = s:lighter_gray
-  let s:norm_subtle     = s:light_gray
-  let s:purple          = s:light_purple
-  let s:cyan            = s:light_cyan
-  let s:green           = s:light_green
-  let s:red             = s:light_red
-  let s:visual          = s:lighter_black
-  let s:constant        = s:white
-  let s:comment         = s:yellow_c
-  let s:comment_bg      = s:yellow_black
-  let s:identifier      = s:actual_white
-else
-  let s:bg              = s:actual_white
-  let s:bg_subtle       = s:light_gray
-  let s:bg_very_subtle  = s:nearly_white
-  let s:norm            = s:light_black
-  let s:norm_subtle     = s:lighter_black
-  let s:purple          = s:dark_purple
-  let s:cyan            = s:dark_cyan
-  let s:green           = s:dark_green
-  let s:red             = s:dark_red
-  let s:visual          = s:light_blue
-  let s:constant        = s:medium_gray
-  let s:comment         = s:yellow_cl
-  let s:comment_bg      = s:yellow_white
-  let s:identifier      = s:actual_black
-endif
+let s:bg              = s:actual_white
+let s:bg_subtle       = s:light_gray
+let s:bg_very_subtle  = s:nearly_white
+let s:norm            = s:light_black
+let s:norm_subtle     = s:lighter_black
+let s:purple          = s:dark_purple
+let s:cyan            = s:dark_cyan
+let s:green           = s:dark_green
+let s:red             = s:dark_red
+let s:visual          = s:light_blue
+let s:constant        = s:lila  "s:medium_gray
+"let s:comment         = s:yellow_cl
+"let s:comment_bg      = s:yellow_white
+let s:comment         = s:green_cl
+let s:comment_bg      = s:green_white
+let s:comment_bg_bg   = s:green_dark_white
+let s:identifier      = s:actual_black
+let s:string          = s:gray_red
+
+let s:cursor_bg = { "gui": "#FF9966", "cterm": "0" }
+let s:cursor_fg = { "gui": "#443311", "cterm": "15" }
 
 " https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
@@ -94,10 +82,16 @@ function! s:h(group, style)
 endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Constant",      {"bg": s:bg, "fg": s:constant})
+call s:h("Constant",      {"bg": s:pink_bg, "fg": s:constant})
+call s:h("String",        {"bg": s:bg, "fg": s:string})
 call s:h("Identifier",    {"bg": s:bg, "fg": s:identifier, "gui": "bold"})
-call s:h("Cursor",        {"bg": s:pink, "fg": s:norm })
+call s:h("Cursor",        {"bg": s:cursor_bg, "fg": s:cursor_fg })
+
 call s:h("Comment",       {"fg": s:comment, "bg": s:comment_bg, "gui": "italic"})
+call s:h("jsDocTags",     {"fg": s:comment, "bg": s:comment_bg, "gui": "bold"})
+call s:h("jsDocType",     {"fg": s:comment, "bg": s:comment_bg})
+call s:h("jsDocParam",    {"fg": s:comment, "bg": s:comment_bg_bg})
+call s:h("jsDocTypeNoParam", {"fg": s:comment, "bg": s:comment_bg})
 
 "call s:h("Constant",      {"fg": s:cyan})
 "hi! link Constant         Normal
@@ -105,14 +99,14 @@ hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
-hi! link String           Constant
+"hi! link String           Constant
 
 "call s:h("Identifier",    {"fg": s:dark_blue})
 "hi! link Identifier       Normal
 hi! link Function         Identifier
 
-"call s:h("Statement",     {"fg": s:green})
-hi! link Statement        Normal
+call s:h("Statement",     {"fg": s:gray_blue, "gui": "bold"})
+"hi! link Statement        Normal
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
@@ -144,7 +138,7 @@ hi! link Debug            Special
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
 call s:h("Error",         {"fg": s:actual_white, "bg": s:red, "cterm": "bold"})
-call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold"})
+call s:h("Todo",          {"fg": s:pink, "bg": s:yellow, "gui": "bold", "cterm": "bold"})
 call s:h("SpecialKey",    {"fg": s:light_green})
 call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:dark_blue})
@@ -213,3 +207,11 @@ hi link GitGutterAdd                LineNr
 hi link GitGutterDelete             LineNr
 hi link GitGutterChange             LineNr
 hi link GitGutterChangeDelete       LineNr
+
+hi link jsStorageClass              Statement
+hi link jsFunction                  Statement
+hi link jsArrowFunction             Statement
+hi link jsOperator                  Normal
+hi link jsHtmlElemAttrs             Normal
+call s:h("jsModules", {"fg": s:dark_red, "gui": "bold"})
+
