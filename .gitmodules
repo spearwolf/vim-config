@@ -217,3 +217,24 @@
 [submodule "_vim/bundle/YouCompleteMe"]
 	path = _vim/bundle/YouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "_vim/bundle/vim-indent-guides"]
+	path = _vim/bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "_vim/bundle/vim-two-firewatch"]
+	path = _vim/bundle/vim-two-firewatch
+	url = git@github.com:rakr/vim-two-firewatch.git
+[submodule "_vim/bundle/moriarty"]
+	path = _vim/bundle/moriarty
+	url = git@github.com:aliou/moriarty.vim.git
+[submodule "_vim/bundle/srcery"]
+	path = _vim/bundle/srcery
+	url = git@github.com:roosta/srcery.git
+[submodule "_vim/bundle/vim-colors-japanesque"]
+	path = _vim/bundle/vim-colors-japanesque
+	url = git@github.com:aereal/vim-colors-japanesque.git
+[submodule "_vim/bundle/vim-deep-space"]
+	path = _vim/bundle/vim-deep-space
+	url = git@github.com:tyrannicaltoucan/vim-deep-space.git
+[submodule "_vim/bundle/term.vim"]
+	path = _vim/bundle/term.vim
+	url = git@github.com:lucy/term.vim.git

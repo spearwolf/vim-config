@@ -119,6 +119,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 "map <silent> <F1> <Esc>:CommandT<CR>
 "map <silent> <F1> <Esc>:Goyo<CR>
 "map <slient> <F1> <Esc><C-P>
+map <silent> <F1> <Esc>:IndentGuidesToggle<CR>
+
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
 
 " MiniBufExpl
 map <silent> <C-Tab> <Esc>:MBEFocus<CR>
@@ -851,9 +855,24 @@ if has("gui_running")
         set lines=33 columns=142
         "set lines=36 columns=130
 
-        set background=light
+        " #==--- newest light colorschemes ------- --  -
+
+        "set background=light
         "colorscheme Tomorrow
-        colorscheme zeroOne-Light
+        "colorscheme zeroOne-Light
+
+        let g:two_firewatch_italics=1
+        "colorscheme two-firewatch
+
+        " #==--- newest light colorschemes ------- --  -
+
+        set background=dark
+        "colorscheme two-firewatch
+        "colorscheme spacegray
+        "colorscheme moriarty
+        "colorscheme srcery
+        colorscheme deep-space
+
 
     endif
 
@@ -870,7 +889,7 @@ else  " gui_running
     "colorscheme twilight256
     "colorscheme seoul256
     "colorscheme xoria256
-    colorscheme 256-grayvim
+    "colorscheme 256-grayvim
 
 endif  " gui_running
 
