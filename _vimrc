@@ -857,21 +857,22 @@ if has("gui_running")
 
         " #==--- newest light colorschemes ------- --  -
 
-        "set background=light
+        set background=light
         "colorscheme Tomorrow
         "colorscheme zeroOne-Light
+        colorscheme zeroOne-LightComic
 
         let g:two_firewatch_italics=1
         "colorscheme two-firewatch
 
         " #==--- newest light colorschemes ------- --  -
 
-        set background=dark
+        "set background=dark
         "colorscheme two-firewatch
         "colorscheme spacegray
         "colorscheme moriarty
         "colorscheme srcery
-        colorscheme deep-space
+        "colorscheme deep-space
 
 
     endif
@@ -890,6 +891,7 @@ else  " gui_running
     "colorscheme seoul256
     "colorscheme xoria256
     "colorscheme 256-grayvim
+    colorscheme 256_noir
 
 endif  " gui_running
 
