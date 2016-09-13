@@ -3,47 +3,49 @@
 " --------------------------------------- --- --  -
 
 hi clear
-set background=light
+set background=dark
 
 if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name = 'zeroOne-Light'
+let g:colors_name = 'zeroOne-Dark'
 
 " =====================-==---=--------------- --   -  -
 
+let s:black             = { "gui": "#000000" }
 let s:blue              = { "gui": "#20BBFC" }
 let s:blue_dark         = { "gui": "#008EC4" }
 let s:green_dark        = { "gui": "#10A778" }
 let s:green_light       = { "gui": "#5FD7A7" }
 let s:pink              = { "gui": "#fb007a" }
-let s:pink_nearky_white = { "gui": "#fff0f8" }
 let s:purple            = { "gui": "#523C79" }
 let s:red               = { "gui": "#C30771" }
 
-let s:bg                = { "gui": "#FFFFFF" }
-let s:bg_a              = { "gui": "#F1F1F1" }
-let s:bg_b              = { "gui": "#E0E0E0" }
-let s:bg_c              = { "gui": "#B2B2B2" }
+let s:bg                = { "gui": "#202020" }
+let s:bg_a              = { "gui": "#303030" }
+let s:bg_b              = { "gui": "#404040" }
+let s:bg_c              = { "gui": "#505050" }
 
-let s:norm              = { "gui": "#424242" }
-let s:not_norm          = { "gui": "#767676" }
-let s:statement         = { "gui": "#506080" }
-let s:identifier        = { "gui": "#000000" }
+let s:norm              = { "gui": "#C6C6C6" }
+let s:not_norm          = { "gui": "#B0B2B6" }
+let s:statement         = { "gui": "#607090" }
+let s:identifier        = { "gui": "#ecece8" }
 let s:constant          = { "gui": "#F000A0" }
 let s:string            = { "gui": "#B32561" }
 
 let s:comment           = { "gui": "#42a282" }
-let s:comment_bg        = { "gui": "#F0FFF7" }
-let s:comment_bg_inner  = { "gui": "#E0FFE7" }
+let s:comment_bg        = { "gui": "#183838" }
+let s:comment_bg_inner  = { "gui": "#103030" }
+
+let s:search_fg         = { "gui": "#000000" }
+let s:search_bg         = { "gui": "#e0e060" }
 
 let s:cursor            = { "gui": "#443311" }
 let s:cursor_bg         = { "gui": "#FF9966" }
-let s:visual            = { "gui": "#c6e6ff" }
-let s:search_bg         = { "gui": "#f2f252" }
-let s:todo_fg           = { "gui": "#306090" }
-let s:todo              = { "gui": "#90c0f0" }
+let s:visual            = { "gui": "#102060" }
+let s:todo              = { "gui": "#ffffff" }
+" TODO publish this colortheme
 
 " =====================-==---=--------------- --   -  -
 
@@ -64,7 +66,7 @@ call s:h("Cursor",        {"bg": s:cursor_bg, "fg": s:cursor })
 
 call s:h("Comment",       {"fg": s:comment, "bg": s:comment_bg, "gui": "italic"})
 
-call s:h("Constant",      {"bg": s:pink_nearky_white, "fg": s:constant})
+call s:h("Constant",      {"bg": s:black, "fg": s:constant})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
@@ -101,13 +103,13 @@ hi! link Debug            Special
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
 call s:h("Error",         {"fg": s:bg, "bg": s:red, "cterm": "bold"})
-call s:h("Todo",          {"fg": s:todo_fg, "bg": s:todo, "gui": "bold", "cterm": "bold"})
+call s:h("Todo",          {"fg": s:red, "bg": s:todo, "gui": "bold", "cterm": "bold"})
 call s:h("SpecialKey",    {"fg": s:green_light})
 call s:h("NonText",       {"fg": s:not_norm})
 call s:h("Directory",     {"fg": s:blue_dark})
 call s:h("ErrorMsg",      {"fg": s:pink})
-call s:h("IncSearch",     {"bg": s:search_bg, "fg": s:norm})
-call s:h("Search",        {"bg": s:search_bg, "fg": s:norm})
+call s:h("IncSearch",     {"bg": s:search_bg, "fg": s:search_fg})
+call s:h("Search",        {"bg": s:search_bg, "fg": s:search_fg})
 call s:h("MoreMsg",       {"fg": s:not_norm, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_c})
@@ -121,7 +123,7 @@ call s:h("Visual",        {"bg": s:visual})
 call s:h("VisualNOS",     {"bg": s:bg_c})
 call s:h("WarningMsg",    {"fg": s:red})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",        {"fg": s:not_norm, "bg": s:bg})
+call s:h("Folded",        {"fg": s:not_norm, "bg": s:bg_a})
 call s:h("FoldColumn",    {"fg": s:bg_c})
 call s:h("DiffAdd",       {"fg": s:green_dark})
 call s:h("DiffDelete",    {"fg": s:red})
