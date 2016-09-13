@@ -1,4 +1,5 @@
 _vim/undodir
+_vim/plugged
 tmp
 old
 tags

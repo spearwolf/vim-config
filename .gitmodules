@@ -214,9 +214,6 @@
 [submodule "_vim/bundle/typescript-vim"]
 	path = _vim/bundle/typescript-vim
 	url = git@github.com:leafgarland/typescript-vim.git
-[submodule "_vim/bundle/YouCompleteMe"]
-	path = _vim/bundle/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe.git
 [submodule "_vim/bundle/vim-indent-guides"]
 	path = _vim/bundle/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
@@ -238,3 +235,9 @@
 [submodule "_vim/bundle/term.vim"]
 	path = _vim/bundle/term.vim
 	url = git@github.com:lucy/term.vim.git
+[submodule "_vim/bundle/VimCompletesMe"]
+	path = _vim/bundle/VimCompletesMe
+	url = git://github.com/ajh17/VimCompletesMe.git
+[submodule "_vim/bundle/neocomplete.vim"]
+	path = _vim/bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim
